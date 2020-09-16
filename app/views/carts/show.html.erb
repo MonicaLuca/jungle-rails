@@ -5,8 +5,8 @@
   </header>
 
   <% if cart.size === 0 %>
-    <h2> Your cart is Empty! </h2>
-    <%= link_to 'Home', :root %>
+    <h2 class="alert"> Your cart is Empty! Click <%= link_to 'here', :root %> to shop! </h2>
+
   <% else %>
     <div class="panel panel-default items">
       <table class="table table-bordered">

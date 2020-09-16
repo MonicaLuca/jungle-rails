@@ -2,7 +2,7 @@
   <h1>Dashboard</h1>
 </header>
 
-<table class="table table-bordered">
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Product Count</th>
@@ -13,9 +13,17 @@
     <tr>
       <td>
       <%= @product_count %>
+      <br>
+      <br>
+      Click <%= link_to 'here', admin_products_path %> to see all products!
       </td>
       <td>
       <%= @category_count %>
+      <br>
+      <% Category.all.each do |category| %>
+        See all <%= link_to category.name, category %> products
+        <br>
+      <% end %>
       </td>
     </tr>
   </tbody>
