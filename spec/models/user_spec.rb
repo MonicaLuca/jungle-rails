@@ -16,13 +16,13 @@ RSpec.describe User, type: :model do
         expect(@user.errors.full_messages).to include("Password confirmation doesn't match Password")
         end
 
-      it "validates that the password fields must be filled" do
+      it "validates that the password field must be filled" do
         @user = User.new first_name: 'User', last_name: 'Test', email: 'test@email.com', password: nil, password_confirmation: 'password123'
         @user.save
         expect(@user.errors.full_messages).to include("Password can't be blank")
         end
 
-      it "validates that the password fields must be filled" do
+      it "validates that the password confirmation field must be filled" do
         @user = User.new first_name: 'User', last_name: 'Test', email: 'test@email.com', password: 'password', password_confirmation: nil
         @user.save
         expect(@user.errors.full_messages).to include("Password confirmation can't be blank")
