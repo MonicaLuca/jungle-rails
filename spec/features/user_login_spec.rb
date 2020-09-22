@@ -1,7 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "AddToCarts", type: :feature, js:true do
-  
+RSpec.feature "UserLogins", type: :feature, js: true do
   before :each do
     @category = Category.create! name: 'Apparel'
 
@@ -17,31 +16,14 @@ RSpec.feature "AddToCarts", type: :feature, js:true do
       )
     end
   end
-  scenario "They see all products" do
-    visit root_path
-    expect(page).to have_css 'article.product', count: 10
-  end
 
-  scenario "They click the login button" do
-    visit root_path
-    first(".text-primary").click
-    sleep(1)
-    save_screenshot 'testing-click-login.png'
-    expect(page).to have_content 'Login'
-  end
-
-
-  scenario "They login and add item to cart" do
+  scenario "The user logs in" do
     visit login_path
     find('#email').set('testing@email.com')
     find('#password').set('password')
     find(".btn.btn-primary").click
     save_screenshot 'testing-login.png'
-    expect(page).to have_content 'My Cart (0)'
-    first('.button_to').click
-    puts page.html
-    save_screenshot 'testing-add-to-cart.png'
-    expect(page).to have_content 'My Cart (1)'
+    expect(page).to have_content 'Logout'
   end
 
 end
