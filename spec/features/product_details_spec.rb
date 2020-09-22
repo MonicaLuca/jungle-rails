@@ -16,17 +16,12 @@ RSpec.feature "Visitor can navigate from the home page to the product details pa
     end
   end
   scenario "They see all products" do
-    # ACT
     visit root_path
-
-    # DEBUG 
     save_screenshot 'home_page.png'
-    
-    #VERIFY
     expect(page).to have_css 'article.product', count: 10
   end
 
-  scenario "They click on first product" do 
+  scenario "They click on first product to see the product details page" do 
   visit root_path
   first(".product img").click
   sleep(1)
