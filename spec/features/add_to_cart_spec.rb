@@ -31,11 +31,24 @@ RSpec.feature "AddToCarts", type: :feature, js:true do
   end
 
   scenario "They login" do
-  visit login_path
-  find('#email').set('testing@email.com')
-  find('#password').set('password')
-  find(".btn.btn-primary").click
-  puts page.html
-  save_screenshot 'testing-login.png'
+    visit login_path
+    find('#email').set('testing@email.com')
+    find('#password').set('password')
+    find(".btn.btn-primary").click
+    save_screenshot 'testing-login.png'
+    expect(page).to have_content 'My Cart (0)'
+  end
+
+  scenario "They login and add item to cart" do
+    visit login_path
+    find('#email').set('testing@email.com')
+    find('#password').set('password')
+    find(".btn.btn-primary").click
+    save_screenshot 'testing-login.png'
+    expect(page).to have_content 'My Cart (0)'
+    first('.button_to').click
+    puts page.html
+    save_screenshot 'testing-add-to-cart.png'
+    expect(page).to have_content 'My Cart (1)'
   end
 end
