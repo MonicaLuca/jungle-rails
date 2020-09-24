@@ -5,13 +5,13 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 ## Screenshots
 
 ### Home Page
-!["Screenshot of Home Page"]()
+!["Screenshot of Home Page"](https://github.com/MonicaLuca/jungle-rails/blob/master/docs/home_page.png?raw=true)
 
 ### My Cart
-!["Screenshot of My Cart"]()
+!["Screenshot of My Cart"](https://github.com/MonicaLuca/jungle-rails/blob/master/docs/my_cart.png?raw=true)
 
 ### Tweeter Payment
-!["Screenshot of Payment"]()
+!["Screenshot of Payment"](https://github.com/MonicaLuca/jungle-rails/blob/master/docs/payment.png?raw=true)
 
 
 ## Setup
