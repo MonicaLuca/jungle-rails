@@ -1,6 +1,6 @@
 # Jungle
 
-A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example. Visitors can create an account, login, and logout. When giving admin access, users can add categories and products to the site. Shoppers can add items to their cart, pay using a credit card, and then recieve an order confirmation via the site. When an item has no more inventory, a sold out bander will appear. 
+A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example. Visitors can create an account, login, and logout. When giving admin access, users can add categories and products to the site. Shoppers can add items to their cart, pay using a credit card, and then recieve an order confirmation via the site. When an item has no more inventory, a sold out banner will appear. 
 
 ## Screenshots
 
